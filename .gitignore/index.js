@@ -7,6 +7,16 @@ const client = new Discord.Client()
 let prefix = "!"
  
 const warns = JSON.parse(fs.readFileSync('./warns.json'))
+
+
+var promise1 = new Promise(function(resolve, reject) {
+  throw 'Uh-oh!';
+});
+
+promise1.catch(function(error) {
+  console.error(error);
+});
+
  
 client.on('ready', function ( ){
     console.log('Bot connecté')
