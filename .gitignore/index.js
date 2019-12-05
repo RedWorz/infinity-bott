@@ -13,7 +13,7 @@ client.on('ready', function ( ){
     client.user.setActivity('Regarde Scp Infinity <3', {type: 'PLAYING'})
 })
 
-client.login('NjUyMTQ0MjEyNjIzNzUzMjQz.XekK0g.6bazWrlYVw1sVzWJVrb2uouL-6c')
+client.login('token')
  
 client.on("message", function (message) {
     if (!message.guild) return
