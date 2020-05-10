@@ -182,7 +182,7 @@ client.on("message", message => {
         var raisondureport = args.join(" ").slice(0)
         if(!raisondureport) return erreur("Vous devez entrer une raison de votre report.", message.channel.id)
         message.channel.send("Votre report a bien été envoyer au staff ✅");
-        client.channels.get("649366880615661591").send("<@&649018827287560212> report de: <@" + message.author.id + "> vous a été envoyé, raison: " + raisondureport);
+        client.channels.get("708975059355828265").send("<@&708975252637483009> report de: <@" + message.author.id + "> vous a été envoyé, raison: " + raisondureport);
     }
 })
  
