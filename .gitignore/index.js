@@ -10,7 +10,7 @@ const warns = JSON.parse(fs.readFileSync('./warns.json'))
  
 client.on('ready', function ( ){
     console.log('Bot connecté')
-    client.user.setActivity('Regarde Scp Infinity <3', {type: 'PLAYING'})
+    client.user.setActivity('Regarde Infinity <3', {type: 'PLAYING'})
 })
 
 client.login(process.env.TOKEN)
