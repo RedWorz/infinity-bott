@@ -24,7 +24,7 @@ client.on("message", function (message) {
         .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
     member.guild.channels.get('708766325748662293').send(embed)
-    member.addRole('714095476529692734')
+    member.addRole('708660080572235847')
 })
  
     if (args[0].toLowerCase() === prefix + "warn") {
