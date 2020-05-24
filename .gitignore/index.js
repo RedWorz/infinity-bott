@@ -18,6 +18,14 @@ client.login(process.env.TOKEN)
 client.on("message", function (message) {
     if (!message.guild) return
     let args = message.content.trim().split(/ +/g)
+    
+    client.on('guildMemberAdd', function (member) {
+    let embed = new Discord.RichEmbed()
+        .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
+        .setFooter('Nous sommes désormais ' + member.guild.memberCount)
+    member.guild.channels.get('708766325748662293').send(embed)
+    member.addRole('714095476529692734')
+})
  
     if (args[0].toLowerCase() === prefix + "warn") {
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande")
