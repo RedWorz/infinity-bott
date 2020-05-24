@@ -141,16 +141,6 @@ client.on("message", function (message) {
         message.channel.send("Le dernier warn de " + member + " a été retiré :white_check_mark:")
     }
 })
-
-/*bievenue*/
-
-    client.on('guildMemberAdd', function (member) {
-    let embed = new Discord.RichEmbed()
-        .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
-        .setFooter('Nous sommes désormais ' + member.guild.memberCount)
-    member.guild.channels.get('708766325748662293').send(embed)
-    member.addRole('708660080572235847')
-})
  
 /*Ban*/
 client.on('message', function (message) {
@@ -166,11 +156,6 @@ client.on('message', function (message) {
        message.guild.ban(member, {days: 7})
        message.channel.send('**' + member.user.username + '** a été banni :white_check_mark:')
     }
-})
-
-client.on('guildMemberAdd', function (member) {
-    let embed = new Discord.RichEmbed()
-    member.addRole('587345387912953867')
 })
 
 //report Tu dit qtu vend juste pour fumer
