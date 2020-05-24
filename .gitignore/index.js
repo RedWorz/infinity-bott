@@ -14,19 +14,10 @@ client.on('ready', function ( ){
 })
 
 client.login(process.env.TOKEN)
-
-    client.on('guildMemberAdd', function (member) {
-    let embed = new Discord.RichEmbed()
-        .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
-        .setFooter('Nous sommes désormais ' + member.guild.memberCount)
-    member.guild.channels.get('708766325748662293').send(embed)
-    member.addRole('708660080572235847')
-})
  
 client.on("message", function (message) {
     if (!message.guild) return
-    let args = message.content.trim().split(/ +/g)
-     
+    let args = message.content.trim().split(/ +/g)     
     if (args[0].toLowerCase() === prefix + "warn") {
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("Vous n'avez pas la permission d'utiliser cette commande")
         let member = message.mentions.members.first()
@@ -149,6 +140,16 @@ client.on("message", function (message) {
         fs.writeFileSync('./warns.json', JSON.stringify(warns))
         message.channel.send("Le dernier warn de " + member + " a été retiré :white_check_mark:")
     }
+})
+
+/*bievenue*/
+
+    client.on('guildMemberAdd', function (member) {
+    let embed = new Discord.RichEmbed()
+        .setDescription(':tada: **' + member.user.username + '** a rejoint ' + member.guild.name)
+        .setFooter('Nous sommes désormais ' + member.guild.memberCount)
+    member.guild.channels.get('708766325748662293').send(embed)
+    member.addRole('708660080572235847')
 })
  
 /*Ban*/
